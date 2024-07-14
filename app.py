@@ -80,7 +80,7 @@ else:
 
 
 def transform_data(data):
-    transformer = ColumnTransformer(transformers=[('tnf', OneHotEncoder(sparse=False, drop='first'), ['Dist Name', 'Crops'])], remainder='passthrough')
+    transformer = ColumnTransformer(transformers=[('tnf', OneHotEncoder(sparse_output=False, drop='first'), ['Dist Name', 'Crops'])], remainder='passthrough')
     return transformer, transformer.fit_transform(data.drop(columns=["Production"]))
 
 transformer_rabi, tdata_rabi = transform_data(data)
