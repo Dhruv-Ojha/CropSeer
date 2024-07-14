@@ -3,6 +3,7 @@ pandas
 numpy
 plotly.express
 matplotlib
+scikit-learn
 sklearn.model_selection
 sklearn.ensemble
 sklearn.compose
